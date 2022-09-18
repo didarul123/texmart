@@ -246,6 +246,21 @@
 
 
                         <div class="control-group mb-3">
+                            <label class="control-label">Product Type</label>
+                            <div class="controls">
+                                <select name="type" id="type" class="form-control">
+                                    <option value=""> Select </option>
+
+                                    <option value="1"> Top Selling </option>
+                                    <option value="2"> Latest </option>
+                                    <option value="3"> Upcomming </option>
+                                    <option value="4"> Tranding </option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="control-group mb-3">
                             <label class="control-label">Size</label>
                             <div class="controls">
                                 <select name="size_title[]" id="size_title" class="form-control productSize" multiple="" required="">

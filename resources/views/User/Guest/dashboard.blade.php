@@ -60,33 +60,33 @@
 					<div class="row">
 
 						<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 mt-4">
-							<div class="dash p-3 bg-info">
+							<div class="dash p-3 bg-info h-100">
 								<label>{{ count($data) }}</label><br>
-								<a href="">Total Order</a>
+								<a href="" style="font-size: 13px;">Total Order</a>
 							</div>
 						</div>
 
 
 						<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 mt-4">
-							<div class="dash p-3 bg-danger">
+							<div class="dash p-3 bg-danger h-100">
 								<label>{{ count($pending) }}</label><br>
-								<a href="">Pending Order</a>
+								<a href="" style="font-size: 13px;">Pending Order</a>
 							</div>
 						</div>
 
 
 
 						<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 mt-4">
-							<div class="dash p-3 bg-warning">
+							<div class="dash p-3 bg-warning h-100">
 								<label>{{ count($processing) }}</label><br>
-								<a href="">Processing Order</a>
+								<a href="" style="font-size: 13px;">Processing Order</a>
 							</div>
 						</div>
 
 						<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 mt-4">
-							<div class="dash p-3 bg-success">
+							<div class="dash p-3 bg-success h-100">
 								<label>{{ count($delivered) }}</label><br>
-								<a href="">Delivered Order</a>
+								<a href="" style="font-size: 13px;">Delivered Order</a>
 							</div>
 						</div>
 

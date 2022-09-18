@@ -10,15 +10,21 @@
 		</div>
 
 		<div class="col-md-9 col-9">
-			<strong class="text-dark">{{ substr($viewdata->product_name, 0, 30) }}... <span>{{ $viewdata->size ?? '' }} - {{ $viewdata->color ?? '' }}</span> </strong>
+			<strong class="text-dark mb-2" style="line-height: 1.3;">{{ substr($viewdata->product_name, 0, 90) }}... <span>{{ $viewdata->size ?? '' }} - {{ $viewdata->color ?? '' }}</span> </strong>
 
 			<a onclick="delete_product('{{$viewdata->id}}')">
-				<i class="fa fa-trash-o text-white float-end" uk-tooltip="title: Remove; pos:bottom" style="background: #b20000;font-size: 12px;"></i
+				<i class="fa fa-trash-o text-dark float-end" uk-tooltip="title: Remove; pos:bottom" style="font-size: 12px;"></i
 				>
 			</a>
 			<br>
 
-			<span>৳ {{$viewdata->current_price}} X {{$viewdata->quantity}}</span><br>
+			<p style="font-size: 20px;color: #333;margin: 0;line-height: 1.4;font-weight: bold;">৳ {{$viewdata->current_price}}</p><br>
+			<!-- X {{$viewdata->quantity}} -->
+			<div class="d-flex align-items-center">
+				<span class="me-2 text-dark" style="font-size: 18px;">Qty: </span>
+				<input type="number" class="product-quantity" min="1">
+				<button class="btn btn-sm"><i class="fas fa-save"></i></button>
+			</div>
 
 		{{-- 	<form id='myform' method='POST' action='' class="mt-2">
 				<input type='button' value='-' class='qtyminus' field='quantity' />
@@ -41,3 +47,9 @@
     </div>
 
 @endif
+
+<script>
+	$('.product-quantity').niceNumber({
+		autoSizeBuffer: 3,
+	});
+</script>

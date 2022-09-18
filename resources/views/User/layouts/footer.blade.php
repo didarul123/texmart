@@ -243,12 +243,12 @@ $page_categories = DB::table('page_categories')
 
                 <div class="row">
                     <div class="col-md-12 col-12">
-                        <span uk-icon="icon:close; ratio:1.2" class="uk-offcanvas-close icone" style="cursor: pointer;background: #b20000;color: white;"></span>
+                        <span uk-icon="icon:close; ratio:1.2" class="uk-offcanvas-close icone" style="cursor: pointer;"></span>
                     </div>
 
                     <div class="col-md-12 col-12">
 
-                        <span style="font-size: 220%;line-height: 45px;font-weight: 800;display: block;margin: 0;">My Cart</span>
+                        <span style="font-size: 26px;line-height: 45px;font-weight: 800;display: block;margin: 0;">My Cart</span>
                        
                     </div>
                     
@@ -314,6 +314,7 @@ $page_categories = DB::table('page_categories')
 <script type="text/javascript" src="{{ asset('public/fontdev/') }}/js/uikit-icons.min.js"></script>
 <script type="text/javascript" src="{{ asset('public/fontdev/') }}/js/jquery.countdown.min.js"></script>
 <!-- <script type="text/javascript" src="{{ asset('public/assets/') }}/js/simple-lightbox.jquery.min.js"></script> -->
+<script src="{{ asset('public/assets/') }}/js/jquery.nice-number.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.2/simple-lightbox.jquery.min.js"></script>
 <script type="text/javascript" src="{{ asset('public/assets/') }}/js/slick.min.js"></script>
 

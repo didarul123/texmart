@@ -90,12 +90,23 @@
               <label>Password</label>
               <input type="password" class="form-control textfill" name="password" id="password" placeholder="Password" required="" value="{{old('password')}}" onkeyup="checkpassword()">
               <span id="p_sms"></span>
+
+              <p style="font-size: 12px; margin: 6px 0px;color: gray;">
+
+                    1. Use at least one Capitale Letter <br>
+                    2. Use at least one Digit <br>
+                    3. Use at least one Small Letter <br>
+                    4. Use at least one Special Character
+
+                </p>
+
+
             </div>
 
 
             <div class="form-group mform col-sm-6">
               <label>Confirm Password</label>
-              <input type="Password"  disabled="disabled" class="form-control textfill" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required="" value="{{old('confirm_password')}}" onkeyup="checkconfirm_p()">
+              <input type="Password"  disabled="disabled" class="form-control textfill" name="password_confirmation" id="confirm_password" placeholder="Confirm Password" required="" value="{{old('confirm_password')}}" onkeyup="checkconfirm_p()">
               <span id="c_sms"></span>
             </div>
 

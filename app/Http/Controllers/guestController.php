@@ -56,8 +56,8 @@ class guestController extends Controller
         //   'last_name' => 'required|max:100',
         'phone' => 'required|unique:guest',
         'address' => 'nullable',
-        'password' => 'min:8',
-        'confirm_password' => 'required_with:password|same:password|min:8'
+        'password' => 'required|string|min:8|confirmed|regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/',
+        'password_confirmation' => 'required_with:password|same:password|min:8'
       ]);
 
       if ($validator->fails()) {

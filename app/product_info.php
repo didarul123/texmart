@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class product_info extends Model
 {
     protected $table="product_productinfo";
-    protected $fillable=['product_id','item_id','category_id','subcategory_id','brand_id','product_name','product_name_bangla','measurement_type','purchase_price','sale_price','discount_price','discount_per','current_price','min_qunt','product_us','product_details','condition','image','admin_id','seller_id','shipping_id','home_item_show','offer_id', 'stock_status', 'call_for_order'];
+    protected $fillable=['product_id','item_id','category_id','subcategory_id','brand_id','product_name','product_name_bangla','measurement_type','purchase_price','sale_price','discount_price','discount_per','current_price','min_qunt','product_us','product_details','condition','image','admin_id','seller_id','shipping_id','home_item_show','offer_id', 'stock_status', 'call_for_order', 'type'];
 
       public function measurment()
     {

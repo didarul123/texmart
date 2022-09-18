@@ -14,6 +14,12 @@ $setting = DB::table('settings')->first();
 
   <link rel="shortcut icon" href="{{asset('/public/siteImage')}}/{{$setting->favicon}}" class="img-fluid">
 
+    <!-- Google Fonts (Work Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.maateen.me/solaiman-lipi/font.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet">
@@ -24,6 +30,7 @@ $setting = DB::table('settings')->first();
 
   <link rel="stylesheet" type="text/css" href="{{ asset('public/fontdev/') }}/css/uikit.min.css">
   <!-- <link rel="stylesheet" type="text/css" href="{{ asset('public/assets/') }}/css/magnific-popup.css"> -->
+  <link rel="stylesheet" href="{{ asset('public/assets/') }}/css/jquery.nice-number.min.css" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.2/simple-lightbox.css">
   <link rel="stylesheet" type="text/css" href="{{ asset('public/assets/') }}/css/slick-theme.css">
   <link rel="stylesheet" type="text/css" href="{{ asset('public/assets/') }}/css/slick.css">
@@ -201,7 +208,7 @@ $setting = DB::table('settings')->first();
 
               <div class="mega-menu">
                 <div class="container">
-                  <div class="row row-cols-4 g-4">
+                  <div class="row row-cols-5 g-4">
 
                     @foreach($category as $cat)
                     @if($cat->item_id == $i->id)
@@ -212,7 +219,7 @@ $setting = DB::table('settings')->first();
                     ?>
                     
                     <div class="col">
-                      <h5 class="mega-menu__heading">{{ $cat->category_name }}</h5>
+                      <h5 class="mega-menu__heading"><a href="{{url('category')}}/{{$category_name}}/{{$cat->id}}" style="color: inherit;">{{ $cat->category_name }}</a></h5>
                       <ul class="mega-menu__list">
                         @foreach($sub_categories as $sub_category)
 

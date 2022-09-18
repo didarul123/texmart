@@ -233,6 +233,23 @@
                   </div>
                 </div>
 
+
+                <div class="control-group mb-3">
+                    <label class="control-label">Product Type</label>
+                    <div class="controls">
+                        <select name="type" id="type" class="form-control">
+
+                          <option value=""> Select </option>
+
+
+                            <option value="1" @php if ($data->type == 1) { echo "selected"; } @endphp> Top Selling </option>
+                            <option value="2" @php if ($data->type == 2) { echo "selected"; } @endphp> Latest </option>
+                            <option value="3" @php if ($data->type == 3) { echo "selected"; } @endphp> Upcomming </option>
+                            <option value="4" @php if ($data->type == 4) { echo "selected"; } @endphp> Tranding </option>
+                        </select>
+                    </div>
+                </div>
+
                 <div class="control-group mb-3">
                     <label class="control-label">Size</label>
                     <div class="controls">

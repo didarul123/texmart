@@ -91,6 +91,7 @@ img {
 }
 .banner-img {
     overflow: hidden;
+    max-height: 500px;
 }
 .banner-img img {
     transition: .3s;
@@ -380,7 +381,7 @@ img {
 
 .mega-menu__heading {
     margin-bottom: 12px;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
     font-family: 'PT Serif', serif;
 }
@@ -439,6 +440,24 @@ img {
 .product-cart__image {
     position: relative;
 }
+.product-cart__badge {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+.product-cart__badge span {
+    background-color: #b90000;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 5px 8px;
+}
 
 .product-cart__discount {
     position: absolute;
@@ -452,21 +471,34 @@ img {
     font-size: 12px;
 }
 
-.product-cart__wishlist {
+.product-cart__button-container {
     position: absolute;
     top: 10px;
     right: 10px;
+    display: flex;
+    gap: 10px;
+}
+.product-cart__wishlist {
     --size: 30px;
     width: var(--size);
     height: var(--size);
-    background: transparent;
+    background: whitesmoke;
     border: none;
+    border-radius: 50%;
     opacity: 0;
     transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .product-cart__title {
     color: #333;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 600;
+    line-height: 1.2;
+    display: block;
 }
 
 .product-cart__price {}
@@ -1120,7 +1152,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card-body strong {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
 }
 
 .card-body span {
@@ -1771,6 +1805,12 @@ table.dataTable tbody td {
     height: calc(100% - 6px);
 }
 
+.rating-product i {
+    overflow: hidden;
+    font-size: 12px;
+    color: #efce3e;
+}
+
 /* Responsive layout - make the columns stack on top of each other instead of next to each other */
 @media (max-width: 400px) {
 
@@ -1799,4 +1839,23 @@ table.dataTable tbody td {
     .date_container {
         justify-content: flex-end;
     }
+}
+
+.nice-number {
+    display: inline-flex;
+    border: 1px solid #e2e2e2;
+}
+.nice-number button {
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 2px 7px;
+}
+.nice-number input {
+    border: none;
+    border-left: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
 }

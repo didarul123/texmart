@@ -16,6 +16,9 @@
 
 	function AddCart(product_id)
 	{
+		var $this = $(this);
+		console.log(this)
+
 		var Quantity = $("#Quantity-"+product_id).val();
 		// var size = $("#size-"+product_id).val();
 		// var color = $("#color-"+product_id).val();
@@ -29,6 +32,16 @@
 			type:'POST',
 			data:{product_id:product_id,Quantity:Quantity,size:size,color:color},
 			beforeSend:function(){
+
+
+				UIkit.notification({
+					message: '<i class="fa fa-shopping-basket"></i>&nbsp;&nbsp;&nbsp; <span style="color: white;font-weight: 600;">Please wait.. product is adding to cart</span> ',
+					pos:     'bottom-center',
+					timeout:  1000,
+					status: 'primary',
+				});
+
+
 				 $('#cartbutton').hide();
 				 $('#loading').show();
 			},
@@ -40,6 +53,7 @@
 					timeout:  2000,
 					status: 'primary',
 				});
+
 				shopping_cart();
 				totalcartprice();
 				totalcartqunt();
@@ -47,6 +61,7 @@
 
 				$('#loading').hide();
 				$('#cartbutton').show();
+
 			}
 		});
 	}

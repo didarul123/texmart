@@ -1,22 +1,22 @@
-											
+
 @php
 $total =0;
 @endphp
 @if(isset($view))
 @foreach($view as $viewdata)
-@php
-$total +=$viewdata->current_price*$viewdata->quantity;
-@endphp
-<tr class="text-center">
+	@php
+	$total +=$viewdata->current_price*$viewdata->quantity;
+	@endphp
+	<tr class="text-center">
 
-	<td>{{$viewdata->product_name}} <br> - <span>{{ $viewdata->size ?? '' }} - {{ $viewdata->color ?? '' }}</span>
-		<input type="checkbox" name="shipping_id[]" id="shipping_id" value="{{$viewdata->shipping_id}}" checked=""  disabled="">
-	</td>
-	<td>{{$viewdata->quantity}}</td>
-	<td>{{$viewdata->current_price}}</td>
-	<td>{{$viewdata->current_price*$viewdata->quantity}}</td>
-	<td><a><span uk-icon="icon: trash; ratio: 0.8" class="text-danger" onclick="delete_product('{{$viewdata->id}}')"></span></a></td>
-</tr>
+		<td>{{$viewdata->product_name}} <br> - <span>{{ $viewdata->size ?? '' }} - {{ $viewdata->color ?? '' }}</span>
+			<input type="checkbox" name="shipping_id[]" id="shipping_id" value="{{$viewdata->shipping_id}}" checked=""  disabled="">
+		</td>
+		<td>{{$viewdata->quantity}}</td>
+		<td>{{$viewdata->current_price}}</td>
+		<td>{{$viewdata->current_price*$viewdata->quantity}}</td>
+		<td><a><span uk-icon="icon: trash; ratio: 0.8" class="text-danger" onclick="delete_product('{{$viewdata->id}}')"></span></a></td>
+	</tr>
 @endforeach
 @endif
 <tr class="text-left">

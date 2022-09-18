@@ -115,6 +115,7 @@ class ProductController extends Controller
         'home_item_show'=>$request->home_item_show,
         'seller_id'=>$request->seller_id,
         'offer_id'=>$request->offer_id,
+        'type'=> $request->type,
         
       );
 
@@ -317,6 +318,7 @@ class ProductController extends Controller
         'admin_id'=>$admin_id,
         'seller_id'=>$request->seller_id,
         'offer_id'=>$request->offer_id,
+        'type'=>$request->type,
       );
 
       $data = product_info::find($id)->update($insert);
